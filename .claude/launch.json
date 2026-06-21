@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "boarding-pass",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/ethanbrown/Desktop/boarding-pass", "-l", "3030"],
+      "port": 3030
+    }
+  ]
+}
