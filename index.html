@@ -81,10 +81,14 @@
   </div>
 </section>
 
-<!-- ========== PLANE DIVIDER ========== -->
-<div class="plane-divider" id="plane-divider">
-  <div class="plane-trail"></div>
-  <img class="plane-img" src="images/plane.png" alt="" aria-hidden="true">
+<!-- ========== COMPANIES WE'VE WORKED WITH ========== -->
+<div class="logo-banner">
+  <p class="handwritten logo-banner-title">Companies we've worked with</p>
+  <div class="logo-track">
+    <img src="images/logos/unidays.png" alt="UNiDAYS">
+    <img src="images/logos/visit-lincoln.png" alt="Visit Lincoln">
+    <img src="images/logos/bgt.png" alt="Britain's Got Talent">
+  </div>
 </div>
 
 <!-- ========== THE WORK — Formal collage ========== -->
@@ -149,6 +153,12 @@
   </div>
 </section>
 
+<!-- ========== PLANE DIVIDER ========== -->
+<div class="plane-divider" id="plane-divider">
+  <div class="plane-trail"></div>
+  <img class="plane-img" src="images/plane.png" alt="" aria-hidden="true">
+</div>
+
 <!-- ========== THE CREW ========== -->
 <section class="crew section" id="crew">
   <div class="container">
@@ -158,7 +168,7 @@
 
       <article class="crew-card slide-in" data-dir="left">
         <div class="crew-photo-wrap">
-          <div class="crew-avatar">E</div>
+          <img src="images/us/ethan.png" class="crew-avatar-img" alt="Ethan">
         </div>
         <div class="crew-body">
           <h3>Ethan</h3>
@@ -181,7 +191,7 @@
 
       <article class="crew-card slide-in" data-dir="right">
         <div class="crew-photo-wrap">
-          <div class="crew-avatar">J</div>
+          <img src="images/us/joe.png" class="crew-avatar-img" alt="Joe">
         </div>
         <div class="crew-body">
           <h3>Joe</h3>
@@ -197,9 +207,32 @@
             <span>Visual direction</span>
             <span>Camera work</span>
           </div>
-          <a href="https://joecalveyportfolio.netlify.app/portfolio" class="crew-link" target="_blank" rel="noopener">View Joe's portfolio &rarr;</a>
+          <a href="https://joecalveyportfolio.netlify.app/" class="crew-link" target="_blank" rel="noopener">View Joe's portfolio &rarr;</a>
         </div>
         <div class="crew-seat handwritten">Seat 1B</div>
+      </article>
+
+      <!-- Kavi -->
+      <article class="crew-card slide-in" data-dir="left">
+        <div class="crew-photo-wrap">
+          <div class="crew-avatar">K</div>
+        </div>
+        <div class="crew-body">
+          <h3>Kavi</h3>
+          <p class="handwritten crew-role">Videography &middot; Editing &middot; Production</p>
+          <p>The filmmaker. Kavi is a professional videographer and editor whose
+          work has featured on Britain's Got Talent. He brings broadcast level
+          production quality to everything he touches, from short form social
+          content to full campaign films.</p>
+          <p>If it moves, he can shoot it. If it doesn't move, he'll make it look
+          like it does.</p>
+          <div class="crew-tags">
+            <span>Videography</span>
+            <span>Video editing</span>
+            <span>Production</span>
+          </div>
+        </div>
+        <div class="crew-seat handwritten">Seat 1C</div>
       </article>
 
     </div>
@@ -276,6 +309,9 @@
     <p class="gate-footer">&copy; 2026 Boarding Pass Creative &middot; FL-001</p>
   </div>
 </footer>
+
+<!-- Deploy button — only visible on localhost -->
+<button class="deploy-btn" id="deploy-btn" style="display:none;">Deploy</button>
 
 <script src="script.js"></script>
 </body>

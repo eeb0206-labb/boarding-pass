@@ -314,3 +314,34 @@ var NTFY_TOPIC = 'boarding-pass-je';  // CHANGE THIS to your own unique ntfy top
     links.classList.toggle('open');
   });
 })();
+
+/* ── 9. Logo banner — duplicate for seamless loop ── */
+(function () {
+  var track = document.querySelector('.logo-track');
+  if (!track) return;
+  track.innerHTML = track.innerHTML + track.innerHTML;
+})();
+
+/* ── 10. Deploy button — localhost only ── */
+(function () {
+  var btn = document.getElementById('deploy-btn');
+  if (!btn) return;
+  var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  if (!isLocal) return;
+  btn.style.display = 'block';
+
+  btn.addEventListener('click', function () {
+    btn.textContent = 'Deploying...';
+    btn.disabled = true;
+    fetch('/api/deploy', { method: 'POST' })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        btn.textContent = data.ok ? 'Deployed!' : 'Failed';
+        setTimeout(function () { btn.textContent = 'Deploy'; btn.disabled = false; }, 3000);
+      })
+      .catch(function () {
+        btn.textContent = 'Failed';
+        setTimeout(function () { btn.textContent = 'Deploy'; btn.disabled = false; }, 3000);
+      });
+  });
+})();
